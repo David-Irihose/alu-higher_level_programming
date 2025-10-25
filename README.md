@@ -1,3 +1,1 @@
-
-
-This repository contains higher-level programming projects.
+This repository contains higher-level programming projects
