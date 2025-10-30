@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
-    from variable_load_5 import a
+    try:
+        from variable_load_5 import a
+    except ImportError:
+        a = None
 
-    print(a)
+    if a is not None:
+        print(a)
