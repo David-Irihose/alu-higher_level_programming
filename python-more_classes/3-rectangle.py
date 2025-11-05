@@ -1,27 +1,21 @@
 #!/usr/bin/python3
 """
-This module defines a Rectangle class with width and height,
-including methods to compute area, perimeter, and string representation.
+This module defines a Rectangle class with private width and height,
+providing methods to compute area, perimeter, and string representations.
 """
 
 
 class Rectangle:
-    """Class that defines a rectangle by width and height."""
+    """Class that defines a rectangle with width and height."""
 
     def __init__(self, width=0, height=0):
-        """
-        Initialize a new Rectangle.
-
-        Args:
-            width (int): Width of the rectangle (default 0).
-            height (int): Height of the rectangle (default 0).
-        """
+        """Initialize rectangle with optional width and height."""
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Get the width of the rectangle."""
+        """Retrieve the width of the rectangle."""
         return self.__width
 
     @width.setter
@@ -35,7 +29,7 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get the height of the rectangle."""
+        """Retrieve the height of the rectangle."""
         return self.__height
 
     @height.setter
@@ -58,11 +52,12 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Return the rectangle as a string of '#' characters."""
+        """Return string representation of the rectangle with #."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#" * self.__width for _ in range(self.__height)])
+        lines = ["#" * self.__width for _ in range(self.__height)]
+        return "\n".join(lines)
 
     def __repr__(self):
-        """Return the formal string representation of the rectangle."""
-        return f"Rectangle({self.__width}, {self.__height})"
+        """Return a string that can recreate the rectangle via eval()."""
+        return "Rectangle({}, {})".format(self.__width, self.__height)
