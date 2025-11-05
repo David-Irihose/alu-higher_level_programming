@@ -15,8 +15,8 @@ class Square:
 
         Args:
             size (int): Size of the square (default 0).
-            position (tuple): Coordinates for printing the square (default
-                              (0, 0)).
+            position (tuple): Coordinates for printing the square
+                              (default (0, 0)).
 
         Raises:
             TypeError: If size is not an integer or position is not a tuple
@@ -52,7 +52,9 @@ class Square:
                 or len(value) != 2
                 or not all(isinstance(n, int) for n in value)
                 or not all(n >= 0 for n in value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(
+                "position must be a tuple of 2 positive integers"
+            )
         self.__position = value
 
     def area(self):
@@ -60,7 +62,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Print the square using the character '#' taking position into account."""
+        """Print the square using '#' taking position into account."""
         if self.__size == 0:
             print()
             return
