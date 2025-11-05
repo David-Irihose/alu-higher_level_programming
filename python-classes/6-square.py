@@ -15,7 +15,8 @@ class Square:
 
         Args:
             size (int): Size of the square (default 0).
-            position (tuple): Coordinates for printing the square (default (0, 0)).
+            position (tuple): Coordinates for printing the square (default
+                              (0, 0)).
 
         Raises:
             TypeError: If size is not an integer or position is not a tuple
@@ -47,9 +48,10 @@ class Square:
     @position.setter
     def position(self, value):
         """Set the position of the square with validation."""
-        if (not isinstance(value, tuple) or len(value) != 2 or
-                not all(isinstance(n, int) for n in value) or
-                not all(n >= 0 for n in value)):
+        if (not isinstance(value, tuple)
+                or len(value) != 2
+                or not all(isinstance(n, int) for n in value)
+                or not all(n >= 0 for n in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
