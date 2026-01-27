@@ -1,1 +1,1 @@
-Python about object
+# Python - Everything is object

@@ -1,18 +1,17 @@
 #!/usr/bin/python3
-"""Module 6-load_from_json_file.
-Creates an Object from a “JSON file”.
-"""
-
-
+"""Module that defines a function to load a
+Python object from a JSON file."""
 import json
 
 
 def load_from_json_file(filename):
-    """Creates an object from filename.
-    Args:
-        - filename: name of the JSON file
-    Returns: the object
-    """
+    """Load a Python object from a file in JSON format.
 
-    with open(filename, 'r') as f:
-        return json.load(f)
+    Args:
+        filename (str): The name of the file to load the object from.
+
+    Returns:
+        object: The Python object represented by the JSON file.
+    """
+    with open(filename, 'r') as json_file:
+        return json.load(json_file)

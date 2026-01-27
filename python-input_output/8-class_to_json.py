@@ -1,19 +1,14 @@
 #!/usr/bin/python3
-"""Module 8-class_to_json.
-Returns the dictionary description with
-simple data structure (list, dictionary,
-string, integer and boolean)
-for JSON serialization of an object.
-"""
+"""Module for converting class instances to JSON-serializable dictionaries"""
 
 
 def class_to_json(obj):
-    """Creates a dict description of obj.
+    """Returns the dictionary description for JSON serialization of an object
 
     Args:
-        - obj: object to serialize
+        obj: an instance of a Class
 
-    Returns: dictionnary description of obj
+    Returns:
+        Dictionary containing all serializable attributes of obj
     """
-
     return obj.__dict__
